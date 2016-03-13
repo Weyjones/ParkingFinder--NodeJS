@@ -11,7 +11,7 @@
     "grunt-contrib-uglify": "~0.5.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "name": "helloworld",
   "version": "1.0.0",

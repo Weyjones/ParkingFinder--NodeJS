@@ -10,6 +10,13 @@ app.get('/listUsers', function(req, res) {
 	});
 })
 
+app.get('/blocks', function(req, res) {
+	var blocks = ['Fixed', 'Movable', 'Rotating'];
+	//res.send(blocks);
+	res.redirect(301, '/parts');
+
+})
+
 var server = app.listen(8081, function() {
 	var host = server.address().address
 	var port = server.address().port
