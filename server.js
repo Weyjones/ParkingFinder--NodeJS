@@ -1,17 +1,15 @@
 var express = require('express');
+var logger = require('./lib/modules/logger/logger');
 
 var app = express();
+app.use(logger);
 var fs = require('fs');
-/*
-app.get('/', function(req, res) {
-	res.sendFile(__dirname + '/public/index.html');
-});
-*/
+
 app.use(express.static('public'));
 app.get('/listUsers', function(req, res) {
 	fs.readFile(__dirname + "/" + "users.json", "utf8", function(err, data) {
 		console.log(data);
-		res.end(data);
+		res.send(data);
 	});
 });
 

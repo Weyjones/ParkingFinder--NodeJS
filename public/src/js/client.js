@@ -1,4 +1,5 @@
 $(function() {
+
 	$.get('/blocks', appendToList);
 	
 	function appendToList(blocks) {
@@ -8,4 +9,8 @@ $(function() {
 		}
 		$('.block-list').append(list);
 	}
+	
+	$.get('/listUsers', function(response){
+		console.log(response);
+	});
 });
