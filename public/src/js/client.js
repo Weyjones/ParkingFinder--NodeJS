@@ -14,6 +14,8 @@ $(function() {
 		console.log(response);
 	});
 	$.get('/listStates', function(response){
-		console.log(response);
+		for (var state in response) {
+    		$('<option value="'+ state +'">'+ response[state] +'</option>').appendTo($('#state'));
+    	}
 	});
 });
