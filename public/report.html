@@ -1,0 +1,79 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/lib/form.css">
+  <link rel="stylesheet" href="/lib/bootstrap.min.css">
+  <title>Building Blocks</title>
+</head>
+<body>
+  <h1>Report</h1>
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Parking Report</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="street">Street Address</label>  
+  <div class="col-md-4">
+  <input id="street" name="street" type="text" placeholder="placeholder" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="city">City</label>  
+  <div class="col-md-2">
+  <input id="city" name="city" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="state">State</label>
+  <div class="col-md-1">
+    <select id="state" name="state" class="form-control">
+    </select>
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="zip">Zip Code</label>  
+  <div class="col-md-1">
+  <input id="zip" name="zip" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Button Drop Down -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rate">Parking Rate</label>
+  <div class="col-md-1">
+    <div class="input-group">
+      <input id="rate" name="rate" class="form-control" placeholder="" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-default">Submit</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+  <ul class="block-list"></ul>
+  <script type="text/javascript" src="/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="src/js/client.js"></script>
+</body>
+</html>
+            
