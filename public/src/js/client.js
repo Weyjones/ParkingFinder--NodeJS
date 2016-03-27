@@ -13,4 +13,7 @@ $(function() {
 	$.get('/listUsers', function(response){
 		console.log(response);
 	});
+	$.get('/listStates', function(response){
+		console.log(response);
+	});
 });

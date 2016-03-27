@@ -1,5 +1,6 @@
 var express = require('express');
 var logger = require('./lib/modules/logger/logger');
+var redis = require('./lib/modules/redis/redis');
 
 var app = express();
 app.use(logger);
@@ -13,6 +14,19 @@ app.get('/listUsers', function(req, res) {
 	});
 });
 
+app.get('/listStates', function(req, res) {
+	fs.readFile(__dirname + "/" + "states.json", "utf8", function(err, data) {
+		res.send(JSON.parse(data));
+	});
+});
+
+/*
+app.post('/parking/create', function(req, res) {
+	console.log(req.body);
+	//redis.lpush('parkings', )
+	res.send(req.body);
+});
+*/
 app.get('/blocks', function(req, res) {
 	var blocks = ['Fixed', 'Movable', 'Rotating'];
 	res.send(blocks);
